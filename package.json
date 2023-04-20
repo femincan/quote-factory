@@ -38,6 +38,6 @@
     "vite": "^4.2.0"
   },
   "lint-staged": {
-    "*.{ts,tsx}": "eslint"
+    "./src/**/*.{ts,tsx}": "eslint"
   }
 }
