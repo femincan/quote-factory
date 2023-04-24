@@ -29,6 +29,7 @@
       { "namedComponents": ["arrow-function"] }
     ],
     "react/require-default-props": 0,
-    "import/extensions": [2, { "ts": "never", "tsx": "never" }]
+    "import/extensions": [2, { "ts": "never", "tsx": "never" }],
+    "import/prefer-default-export": 0
   }
 }
