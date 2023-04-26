@@ -8,6 +8,7 @@
   "extends": [
     "eslint:recommended",
     "airbnb",
+    "plugin:import/recommended",
     "plugin:import/typescript",
     "plugin:react/jsx-runtime",
     "plugin:@typescript-eslint/recommended",
@@ -21,7 +22,7 @@
     "project": null,
     "tsconfigRootDir": "./"
   },
-  "plugins": ["@typescript-eslint"],
+  "plugins": ["@typescript-eslint", "import"],
   "rules": {
     "react/jsx-filename-extension": [1, { "extensions": [".tsx"] }],
     "react/function-component-definition": [
@@ -30,6 +31,22 @@
     ],
     "react/require-default-props": 0,
     "import/extensions": [2, { "ts": "never", "tsx": "never" }],
-    "import/prefer-default-export": 0
+    "import/prefer-default-export": 0,
+    "import/no-unresolved": 2,
+    "import/no-extraneous-dependencies": [
+      2,
+      { "devDependencies": ["vite.config.ts"] }
+    ]
+  },
+  "settings": {
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx"]
+    },
+    "import/resolver": {
+      "typescript": {
+        "alwaysTryTypes": true,
+        "project": "./tsconfig.json"
+      }
+    }
   }
 }
