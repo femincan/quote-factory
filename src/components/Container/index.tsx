@@ -12,11 +12,11 @@ const Container = ({ children, colorsArray }: ContainerProps) => {
 
   return (
     <motion.div
-      className='w-full h-full px-1 py-5'
+      className='min-h-[inherit] w-full p-5'
       initial={{ backgroundColor: colorsArray[0] }}
       animate={{ backgroundColor: bgColor }}
     >
-      <div className='flex flex-col items-center justify-start mx-auto max-w-7xl max-sm:max-w-full'>
+      <div className='mx-auto flex min-h-[inherit] w-full flex-col items-center justify-start gap-10 sm:max-w-7xl'>
         {children}
       </div>
     </motion.div>
