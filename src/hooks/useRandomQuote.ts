@@ -7,7 +7,7 @@ type Quote = {
 };
 
 const useRandomQuote = () => {
-  const { data, error, isLoading, mutate } = useSWR(
+  const { data, error, isValidating, mutate } = useSWR(
     'https://api.quotable.io/quotes/random',
     fetcher
   );
@@ -23,8 +23,7 @@ const useRandomQuote = () => {
   return {
     quote,
     error,
-    isLoading,
-
+    isValidating,
     mutate,
   };
 };
