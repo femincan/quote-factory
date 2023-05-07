@@ -6,7 +6,7 @@ import { ButtonWrapper } from './ButtonWrapper';
 import { Quote } from './Quote';
 
 const QuoteCard = () => {
-  const { quote, mutate } = useRandomQuote();
+  const { quote, isValidating, mutate } = useRandomQuote();
 
   return (
     <div
@@ -40,6 +40,7 @@ const QuoteCard = () => {
               type='button'
               id='new-quote'
               className='text-lg'
+              disabled={isValidating}
               onClick={() => mutate()}
             >
               New Quote
