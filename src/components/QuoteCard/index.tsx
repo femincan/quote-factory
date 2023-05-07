@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import TwitterIcon from '@src/assets/twitter.svg';
-import { baseTransition } from '@src/constants';
+import { springTransition } from '@src/constants';
 import { useRandomQuote } from '@src/hooks';
 import { ButtonWrapper } from './ButtonWrapper';
 import { Quote } from './Quote';
@@ -16,7 +16,7 @@ const QuoteCard = () => {
       <motion.div
         className='flex w-full max-w-xl flex-col items-stretch justify-between gap-10 rounded-xl bg-sun-flower px-10 py-8 shadow-xl'
         style={{ minHeight: 320 }}
-        transition={baseTransition}
+        transition={springTransition}
         layout
       >
         <Quote />

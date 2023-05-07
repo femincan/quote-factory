@@ -1,6 +1,6 @@
 import { ReactElement, cloneElement } from 'react';
 import { motion } from 'framer-motion';
-import { baseTransition, bgOpacityTransition } from '@src/constants';
+import { springTransition, tweenTransition } from '@src/constants';
 import { useRandomQuote } from '@src/hooks';
 
 type ButtonWrapperProps = {
@@ -20,7 +20,7 @@ const ButtonWrapper = ({ children }: ButtonWrapperProps) => {
         isValidating ? 'pointer-events-none' : ''
       }`}
       animate={{ '--tw-bg-opacity': isValidating ? 0.5 : 1 } as object}
-      transition={{ ...baseTransition, ...bgOpacityTransition }}
+      transition={{ ...springTransition, '--tw-bg-opacity': tweenTransition }}
       whileHover={{ scale: 1.2 }}
       whileTap={{ scale: 0.9 }}
     >

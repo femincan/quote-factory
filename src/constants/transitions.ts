@@ -1,16 +1,14 @@
 import { Transition } from 'framer-motion';
 
-const baseTransition: Transition = {
+const springTransition: Transition = {
   type: 'spring',
   stiffness: 300,
   damping: 10,
 };
 
-const bgOpacityTransition: Transition = {
-  '--tw-bg-opacity': {
-    type: 'tween',
-    duration: 0.3,
-  },
+const tweenTransition: Transition = {
+  type: 'tween',
+  duration: 0.3,
 };
 
-export { baseTransition, bgOpacityTransition };
+export { springTransition, tweenTransition };
