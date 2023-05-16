@@ -4,7 +4,7 @@
 
 A random quote app created with React and Framer Motion for the first project of the Front End Development Libraries Curriculum of FreeCodeCamp.
 
-![Application Screenshot](https://github.com/femincan/quote-factory/assets/78358128/1fc92dc2-6ff8-495a-8f07-e33b0a6ace09)
+![Application Screenshot](https://github.com/femincan/quote-factory/assets/78358128/2b8abf4f-1ea3-4c90-85c0-249813533eeb)
 
 ## Table of Contents
 
