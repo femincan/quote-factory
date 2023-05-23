@@ -7,24 +7,14 @@ type Quote = {
 };
 
 const useRandomQuote = () => {
-  const { data, error, isValidating, mutate } = useSWR(
+  const { data, ...restSWR } = useSWR(
     'https://api.quotable.io/quotes/random',
     fetcher
   );
 
-  let quote: Quote | undefined;
-
-  if (data === undefined) {
-    quote = data;
-  } else {
-    [quote] = data as Quote[];
-  }
-
   return {
-    quote,
-    error,
-    isValidating,
-    mutate,
+    quote: (data as Quote[] | undefined)?.[0],
+    ...restSWR,
   };
 };
 
