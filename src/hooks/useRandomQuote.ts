@@ -1,9 +1,15 @@
 import useSWR from 'swr/immutable';
-import { fetcher } from '@src/utils';
+import axios from 'axios';
 
 type Quote = {
   content: string;
   author: string;
+};
+
+const fetcher = async (url: string): Promise<unknown> => {
+  const { data } = await axios.get(url);
+
+  return data;
 };
 
 const useRandomQuote = () => {
