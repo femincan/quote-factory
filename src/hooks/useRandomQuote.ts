@@ -19,8 +19,8 @@ const useRandomQuote = () => {
   );
 
   return {
-    quote: (data as Quote[] | undefined)?.[0],
     ...restSWR,
+    quote: (data as Quote[] | undefined)?.[0],
   };
 };
 
