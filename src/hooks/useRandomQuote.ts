@@ -15,12 +15,12 @@ const fetcher = async (url: string): Promise<unknown> => {
 const useRandomQuote = () => {
   const { data, ...restSWR } = useSWR(
     'https://api.quotable.io/quotes/random',
-    fetcher
+    fetcher,
   );
 
   return {
     ...restSWR,
-    quote: (data as Quote[] | undefined)?.[0],
+    quote: (data as [Quote] | undefined)?.[0],
   };
 };
 
